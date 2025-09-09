@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color:cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.cachorros h1{
+    font-size: 2rem;
+    align-items: center;
+}
+
+body{
+    background-color:lightsteelblue;
+}
+
+.cachorros input{
+    background-color: lightsteelblue;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px;
+    width: 160px;
+    height: 30px;
+    
+    color: blue;
+    gap: 50px;
+}
+
+.cachorros button{
+    background-color: lightsteelblue;
+    box-shadow: 0 2px 8px blue ;
+    border-radius: 8px;
+    width: 60px;
+    height: 30px;
+    
+   
+    
+   
+
+}
