@@ -9,32 +9,38 @@ return imagens.message
 
 }
 
+const input = document.getElementById('input-dog')
 const buscarbtn = document.getElementById('buscarbutton')
+const resultado = document.getElementById('resultado')
 
-function criarCardDogs (url) {
+
+function criarCardDogs (urls) {
+    //limpa o resultado anterior 
     resultado.innerHTML = '';
 
-    imagens.array.forEach(url => {
+    urls.forEach(url => {
     const cardDog = document.createElement('div');
-    card.classList.add('card-cachorro');
+    cardDog.classList.add('card-cachorro');
 
     const img = document.createElement('img');
     img.src = url;
     img.classList.add('foto-card');
 
-    }); 
-   
-
-    // card.appendChild(img);
-    // resultado.appendChild(cardDog);
-    buscarbtn.addEventListener('click', async () => {
-     const raca = racainput.value.toLowerCase()
-    })
+    //Adiciona a imagem ao card
+    cardDog.appendChild(img);
+    //Adiciona o card ao elemento resultado
+    resultado.appendChild(cardDog);
 
 
-
+    });    
 }
+    
+    buscarbtn.addEventListener('click', async () => {
+    const raca = input.value.toLowerCase()
+    const imagens = await buscarImagens(raca)
+    criarCardDogs(imagens)
+       
+   })
 
 
-
- buscarImagens('pinscher')
+ buscarImagens()
